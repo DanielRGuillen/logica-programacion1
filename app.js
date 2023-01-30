@@ -55,9 +55,13 @@ do {
   }
 } while (confirm("¿Intentar de nuevo"));
 {
-  //Se muestra por consola los números de mayor a menor y luego de menor a mayor
-  console.log(esMuyMayor, esMayor, esMenor);
-  console.log(esMenor, esMayor, esMuyMayor);
+  if (esMuyMayor === esMayor && esMuyMayor === esMenor) {
+    alert("Los números son iguales");
+  } else {
+    //Se muestra por consola los números de mayor a menor y luego de menor a mayor
+    console.log(esMuyMayor, esMayor, esMenor);
+    console.log(esMenor, esMayor, esMuyMayor);
+  }
 }
 
 //PLANTEAR OTRA LÓGICA
@@ -69,7 +73,7 @@ do {
 let num1 = Number(prompt("Ingresa el numero 1"));
 let num2 = Number(prompt("Ingresa el numero 2"));
 let num3 = Number(prompt("Ingresa el numero 3"));
-if (num1 === Number(num1) && num2 === Number(num2) && num3 === Number(num3)) {//validamos que la entrada sea un numero
+if ((num1 === Number(num1)) && (num2 === Number(num2)) && (num3 === Number(num3))) {//validamos que la entrada sea un numero
   let array01 = []; //arreglo vacio
   array01.push(num1, num2, num3); //Se agregan los valores al array con el metodo .push
  //usando Math.min y Math.max se identifcan el mayor y menor pero no el del centro.
